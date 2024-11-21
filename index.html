@@ -184,6 +184,36 @@
     #portfolio h2 { color: #FFD700; }
     #contact h2 { color: #FF0000; }
     #contact .rectangle { background-color: #FF0000; }
+
+    /* About Me Section Layout */
+    /* Flexbox for About Me Content */
+    .about-content {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 70px;
+      padding: 20px;
+    }
+
+    /* Image Column (Left-Aligned) */
+    #about .id {
+      flex: 1;
+      display: flex;
+      justify-content: flex-start; /* Pushes the image to the left */
+    }
+
+    #about .id img {
+      max-width: 400px;
+      height: auto;
+      border-radius: 30px;
+    }
+
+    /* Text Column (Right-Aligned) */
+    #about .text-column {
+      flex: 1;
+      padding: 20px;
+      max-width: 500px;
+    }
   </style>
 </head>
 <body>
@@ -211,7 +241,7 @@
       <div class="text-column">
         <h1>Hello, I'm</h1>
         <h2>Emily Sharpe</h2>
-        <p>I am a 2nd year student currently taking Honours Global Business and Digital Arts at the University of Waterloo.</p>
+        <p>I am a 2nd year student currently taking Honours Global Business and Digital Arts at the University of Waterloo. I enjoy UI & UX design, poster and product packaging design. I work in various mediums, but enjoy digital Creative Cloud tools the most.</p>
       </div>
       <div class="id">
         <img src="IMG_2720.jpg" alt="New Photo">
@@ -227,7 +257,21 @@
   <!-- About Section -->
   <section id="about">
     <h1>About Me</h1>
-    <p>Creative thinking, strong communication skills, attention to detail, time management skills, patience, passion, adaptability, technical skills.</p>
+    <div class="about-content">
+      <div class="id">
+        <img src="about_photo.jpg" alt="About Me Photo">
+      </div>
+      <div class="text-column">
+        <p>Creative thinking<br>
+          Strong communication skills<br>
+          Attention to detail<br>
+          time management skills<br>
+          Patience<br>
+          Passion<br>
+          Adaptability<br>
+          Technical sills.</p>
+      </div>
+    </div>
     <div class="rectangles">
       <div class="rectangle"></div>
       <div class="rectangle"></div>
@@ -239,14 +283,8 @@
     <h2>Services I Provide</h2>
     <p>Description of the services you offer, like design, photography, or digital media.</p>
     <div class="services">
-      <img src="Screenshot 2024-11-18 at 11.37.13 AM.png" alt="Services Image" style="float: centre; max-width: 950px; height: auto; margin-right: 20px;">
+      <img src="Screenshot 2024-11-18 at 11.37.13 AM.png" alt="Services Image" style="float: centre; max-width: 950px; height: auto; margin-top: 10px; margin-bottom: 20px;">
     </div>
-  </section>
-
-  <!-- Portfolio Section -->
-  <section id="portfolio">
-    <h2>Portfolio</h2>
-    <p>A showcase of your projects or examples of work you've done.</p>
     <div class="squares-wrapper">
       <div class="square"></div>
       <div class="square"></div>
@@ -257,10 +295,24 @@
     </div>
   </section>
 
+  <!-- Portfolio Section -->
+  <section id="portfolio">
+    <h2>Portfolio</h2>
+    <p>Description of your portfolio, with examples of your work.</p>
+    <div class="squares-wrapper">
+      <div class="square"></div>
+      <div class="square center-square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+    </div>
+  </section>
+
   <!-- Contact Section -->
   <section id="contact">
     <h2>Contact Me</h2>
-    <p>Contact information, form, or links to social media.</p>
+    <p>Provide contact details and form here.</p>
     <div class="rectangles">
       <div class="rectangle"></div>
       <div class="rectangle"></div>
