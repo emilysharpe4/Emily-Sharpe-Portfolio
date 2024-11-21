@@ -14,6 +14,11 @@
       box-sizing: border-box;
     }
 
+    /* Enable smooth scrolling for the page */
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: Arial, sans-serif;
       line-height: 2;
@@ -24,6 +29,10 @@
       background-color: #333;
       color: white;
       padding: 30px;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
     }
 
     nav ul {
@@ -53,12 +62,8 @@
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
-      align-items: flex-start; /* Aligning content to the left */
+      align-items: flex-start;
       background-color: white;
-    }
-
-    #intro, #about, #services, #portfolio, #contact {
-      border-bottom: 30px solid #ccc;
     }
 
     /* Custom Section Divider Colors */
@@ -73,129 +78,54 @@
       margin-top: -10px;
       margin-bottom: 0px;
       text-align: left;
-      font-size: 40px; /* Align headers to the left */
-      font-family: 'Ramabhadra', sans-serif; /* Apply Ramabhadra font to headers */
-    }
-
-    /* About Me Section Header Alignment */
-    #about h1 {
-      text-align: right; /* Right-align the "About Me" heading */
-      width: 100%; /* Ensures it takes up full width */
-      margin-right: 20px; /* Adds a little space from the right */
+      font-size: 40px;
+      font-family: 'Ramabhadra', sans-serif;
     }
 
     /* Paragraph Styling */
     p {
       max-width: 600px;
-      margin: px ;
-      text-align: left;
       margin-top: 10px;
       margin-bottom: 0px;
-      font-size: 25px; /* Align paragraphs to the left */
+      font-size: 25px;
     }
 
     /* Flexbox for Introduction Content */
     .intro-content {
       display: flex;
-      justify-content: flex-start; /* Aligns text and image to the left */
+      justify-content: flex-start;
       align-items: flex-start;
       gap: 70px;
       margin-top: 0px;
-      /* Adjust this value to control spacing */
     }
 
-    /* Text Column */
     .text-column {
       flex: 1;
       padding: 20px;
       max-width: 500px;
-      margin-top: 0; /* Ensure it's at the top of the flex container */
     }
 
-    /* Image Column */
     .id {
       flex: 1;
       padding: 10px;
-      display: flex;
-      justify-content: flex-end;
-      /* Pushes image to the right */
     }
 
     /* Image Styling */
     .id img {
       max-width: 500px;
-      height: flex;
+      height: auto;
       border-radius: 0px;
-    }
-
-    /* Welcome Photo - Centered and Above the Text */
-    .welcome-photo {
-      text-align: center;
-      margin-bottom: 40px; /* Adds space between the welcome photo and the content below */
     }
 
     .welcome-photo img {
       max-width: 1200px;
       height: auto;
       display: block;
-      margin-left:-60px;
-      margin-right: 10px; /* Center the image */
+      margin-left: -60px;
+      margin-right: 10px;
     }
-
-    /* Services Section - Light Blue Squares in 3x2 Format */
-    #services .squares-wrapper {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: repeat(2, 1fr);
-      gap: 20px;
-      padding: 30px;
-      justify-content: flex-start; /* Align squares to the left */
-      align-items: center;
-    }
-
-    #services .square {
-      width: 200px;
-      height: 200px;
-      background-color: #87CEEB;
-    }
-
-    /* Portfolio Section - Yellow Squares Framing Center Square */
-    #portfolio .squares-wrapper {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr;
-      gap: 20px;
-      padding: 30px;
-      justify-content: flex-start; /* Align squares to the left */
-    }
-
-    #portfolio .square {
-      width: 200px;
-      height: 300px;
-      background-color: #FFD700;
-    }
-
-    /* Center Square in Portfolio */
-    #portfolio .center-square {
-      grid-column: 2 / 3;
-      grid-row: 2 / 3;
-    }
-
-    /* Custom Colors for Titles and Rectangles */
-    #intro h1 { color: #013220; }
-    #intro h2 { color: #013220; }
-    #intro .rectangle { background-color: #013220; }
-
-    #about h1 { color: #000080; }
-    #about .rectangle { background-color: #000080; }
-
-    #services h2 { color: #87CEEB; }
-    #portfolio h2 { color: #FFD700; }
-    #contact h2 { color: #FF0000; }
-    #contact .rectangle { background-color: #FF0000; }
 
     /* About Me Section Layout */
-    /* Flexbox for About Me Content */
     .about-content {
       display: flex;
       justify-content: flex-start;
@@ -204,33 +134,164 @@
       padding: 20px;
     }
 
-    /* Image Column (Left-Aligned) */
     #about .id {
       flex: 1;
       display: flex;
-      justify-content: flex-start; /* Pushes the image to the left */
+      justify-content: flex-start;
     }
 
     #about .id img {
-      max-width: 400px;
-      height: auto;
+      max-width: 500px;
+      height: flex;
       border-radius: 0px;
     }
 
-    /* Text Column (Right-Aligned) */
     #about .text-column {
       flex: 1;
       padding: 20px;
       max-width: 500px;
     }
-    /* Services Section - Image Proportionality */
-#services .services img {
-  max-width: 90%; /* Ensures the image scales to fit within its container */
-  height: auto;    /* Maintains the aspect ratio */
-  display: block;  /* Removes any space below the image */
-  border-radius: 10px; /* Optional: adds rounded corners if you want */
-}
 
+    /* Services Section */
+    #services h2 {
+      color: #87CEEB;
+    }
+
+    #portfolio h2 {
+      color: #FFD700;
+    }
+
+    #contact h2 {
+      color: #FF0000;
+    }
+
+    #contact .rectangle {
+      background-color: #FF0000;
+    }
+
+    /* Portfolio Section Image Styling */
+    #portfolio .id img {
+      max-width: 2000px;
+      height: auto;
+      border-radius: 0px;
+      object-fit: cover;
+      display: block;
+      margin: auto;
+    }
+
+    /* Responsive Styles (Media Queries) */
+
+    /* Tablet (Medium Devices) */
+    @media (max-width: 1024px) {
+      body {
+        font-size: 16px;
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav ul li {
+        margin-bottom: 10px;
+      }
+
+      section {
+        padding: 20px 40px;
+      }
+
+      .intro-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .text-column,
+      .id {
+        max-width: 100%;
+      }
+
+      .id img {
+        max-width: 80%;
+        height: auto;
+      }
+
+      .welcome-photo img {
+        max-width: 100%;
+      }
+
+      #about .id img {
+        max-width: 100%;
+      }
+
+      #services .squares-wrapper {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      #portfolio .squares-wrapper {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    /* Mobile (Small Devices) */
+    @media (max-width: 768px) {
+      body {
+        font-size: 14px;
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav ul li {
+        margin-bottom: 10px;
+      }
+
+      section {
+        padding: 20px 20px;
+      }
+
+      .intro-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .text-column,
+      .id {
+        max-width: 100%;
+      }
+
+      .id img {
+        max-width: 80%;
+        height: auto;
+      }
+
+      .welcome-photo img {
+        max-width: 100%;
+      }
+
+      #about .id img {
+        max-width: 100%;
+      }
+
+      #services .squares-wrapper {
+        grid-template-columns: 1fr;
+      }
+
+      #portfolio .squares-wrapper {
+        grid-template-columns: 1fr;
+      }
+
+      h1, h2 {
+        font-size: 24px;
+      }
+
+      p {
+        font-size: 18px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -279,7 +340,7 @@
         <img src="Screenshot 2024-11-20 at 9.08.39 PM.png" alt="About Me Photo">
       </div>
       <div class="text-column">
-        <p>Student Grpahic Designer <br><br>Creative thinking<br>
+        <p>Student Graphic Designer <br><br>Creative thinking<br>
           Strong communication skills<br>
           Attention to detail<br>
           Time management skills<br>
@@ -296,36 +357,41 @@
   </section>
 
   <!-- Services Section -->
-  <!-- Services Section -->
-<section id="services">
-  <h2>Services I Provide</h2>
-  <div class="services-content">
-    <!-- Left-aligned Image Column -->
-    <div class="services">
-      <img src="Screenshot 2024-11-18 at 11.37.13 AM.png" alt="Services Image">
-      
-    </div>
-    
-    <!-- Right-aligned Text Column -->
-  
-</section>
+  <section id="services">
+    <h2>Services I Provide</h2>
+    <div class="services-content">
+      <!-- Left-aligned Image Column -->
+      <div class="services">
+        <img src="Screenshot 2024-11-18 at 11.37.13 AM.png" alt="Designs">
+      </div>
 
+      <!-- Right-aligned Text Column -->
+      <div class="text-column">
+        <h2>UI/UX Design</h2>
+        <p>Designing websites and applications with a user-centered approach, focusing on creating seamless and intuitive experiences.</p>
+        <h2>Product Packaging</h2>
+        <p>Crafting engaging and memorable product packaging designs that reflect brand identity and connect with consumers.</p>
+        <h2>Poster Design</h2>
+        <p>Creating compelling posters for events and promotions with creative visuals and clear messaging.</p>
+      </div>
+    </div>
+  </section>
 
   <!-- Portfolio Section -->
   <section id="portfolio">
     <h2>Portfolio</h2>
-    <div class="squares-wrapper">
-      <div class="square"></div>
-      <div class="square center-square"></div>
-      <div class="square"></div>
+    <div class="portfolio-content">
+      <div class="id">
+        <img src="Screenshot 2024-11-20 at 10.12.17 PM.png" alt="Portfolio Image">
+      </div>
     </div>
   </section>
 
   <!-- Contact Section -->
   <section id="contact">
     <h2>Contact Me</h2>
-    <div class="rectangle"></div>
+    <p>If you'd like to get in touch with me, feel free to reach out!</p>
+    <p>Email: emily@example.com</p>
   </section>
-
 </body>
 </html>
