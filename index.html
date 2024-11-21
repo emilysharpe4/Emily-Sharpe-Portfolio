@@ -62,8 +62,8 @@
     }
 
     /* Custom Section Divider Colors */
-    #intro { border-bottom: 30px solid #013220; height: 1400px; }
-    #about { border-bottom: 30px solid #000080; height: 1000px; }
+    #intro { border-bottom: 0px solid #ffffff; height: 1200px; }
+    #about { border-bottom: 30px solid #ffffff; height: 720px; }
     #services { border-bottom: 30px solid #87CEEB; height: 850px; }
     #portfolio { border-bottom: 30px solid #FFD700; }
     #contact { border-bottom: 30px solid #FF0000; height: 1000px; }
@@ -75,6 +75,13 @@
       text-align: left;
       font-size: 40px; /* Align headers to the left */
       font-family: 'Ramabhadra', sans-serif; /* Apply Ramabhadra font to headers */
+    }
+
+    /* About Me Section Header Alignment */
+    #about h1 {
+      text-align: right; /* Right-align the "About Me" heading */
+      width: 100%; /* Ensures it takes up full width */
+      margin-right: 20px; /* Adds a little space from the right */
     }
 
     /* Paragraph Styling */
@@ -93,7 +100,8 @@
       justify-content: flex-start; /* Aligns text and image to the left */
       align-items: flex-start;
       gap: 70px;
-      margin-top: 0px; /* Adjust this value to control spacing */
+      margin-top: 0px;
+      /* Adjust this value to control spacing */
     }
 
     /* Text Column */
@@ -107,16 +115,17 @@
     /* Image Column */
     .id {
       flex: 1;
-      padding: 20px;
+      padding: 10px;
       display: flex;
-      justify-content: flex-end; /* Pushes image to the right */
+      justify-content: flex-end;
+      /* Pushes image to the right */
     }
 
     /* Image Styling */
     .id img {
-      max-width: 700px;
-      height: 700;
-      border-radius: 30px;
+      max-width: 500px;
+      height: flex;
+      border-radius: 0px;
     }
 
     /* Welcome Photo - Centered and Above the Text */
@@ -205,7 +214,7 @@
     #about .id img {
       max-width: 400px;
       height: auto;
-      border-radius: 30px;
+      border-radius: 0px;
     }
 
     /* Text Column (Right-Aligned) */
@@ -214,6 +223,14 @@
       padding: 20px;
       max-width: 500px;
     }
+    /* Services Section - Image Proportionality */
+#services .services img {
+  max-width: 90%; /* Ensures the image scales to fit within its container */
+  height: auto;    /* Maintains the aspect ratio */
+  display: block;  /* Removes any space below the image */
+  border-radius: 10px; /* Optional: adds rounded corners if you want */
+}
+
   </style>
 </head>
 <body>
@@ -244,7 +261,7 @@
         <p>I am a 2nd year student currently taking Honours Global Business and Digital Arts at the University of Waterloo. I enjoy UI & UX design, poster and product packaging design. I work in various mediums, but enjoy digital Creative Cloud tools the most.</p>
       </div>
       <div class="id">
-        <img src="IMG_2720.jpg" alt="New Photo">
+        <img src="Screenshot 2024-11-20 at 9.36.47 PM.png" alt="New Photo">
       </div>
     </div>
 
@@ -259,52 +276,47 @@
     <h1>About Me</h1>
     <div class="about-content">
       <div class="id">
-        <img src="about_photo.jpg" alt="About Me Photo">
+        <img src="Screenshot 2024-11-20 at 9.08.39 PM.png" alt="About Me Photo">
       </div>
       <div class="text-column">
-        <p>Creative thinking<br>
+        <p>Student Grpahic Designer <br><br>Creative thinking<br>
           Strong communication skills<br>
           Attention to detail<br>
-          time management skills<br>
+          Time management skills<br>
           Patience<br>
           Passion<br>
-          Adaptability<br>
-          Technical sills.</p>
+          Adaptability</p>
       </div>
     </div>
-    <div class="rectangles">
-      <div class="rectangle"></div>
-      <div class="rectangle"></div>
+    <div class="squares-wrapper">
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
     </div>
   </section>
 
   <!-- Services Section -->
-  <section id="services">
-    <h2>Services I Provide</h2>
-    <p>Description of the services you offer, like design, photography, or digital media.</p>
+  <!-- Services Section -->
+<section id="services">
+  <h2>Services I Provide</h2>
+  <div class="services-content">
+    <!-- Left-aligned Image Column -->
     <div class="services">
-      <img src="Screenshot 2024-11-18 at 11.37.13 AM.png" alt="Services Image" style="float: centre; max-width: 950px; height: auto; margin-top: 10px; margin-bottom: 20px;">
+      <img src="Screenshot 2024-11-18 at 11.37.13 AM.png" alt="Services Image">
+      
     </div>
-    <div class="squares-wrapper">
-      <div class="square"></div>
-      <div class="square"></div>
-      <div class="square"></div>
-      <div class="square"></div>
-      <div class="square"></div>
-      <div class="square"></div>
-    </div>
-  </section>
+    
+    <!-- Right-aligned Text Column -->
+  
+</section>
+
 
   <!-- Portfolio Section -->
   <section id="portfolio">
     <h2>Portfolio</h2>
-    <p>Description of your portfolio, with examples of your work.</p>
     <div class="squares-wrapper">
       <div class="square"></div>
       <div class="square center-square"></div>
-      <div class="square"></div>
-      <div class="square"></div>
-      <div class="square"></div>
       <div class="square"></div>
     </div>
   </section>
@@ -312,11 +324,7 @@
   <!-- Contact Section -->
   <section id="contact">
     <h2>Contact Me</h2>
-    <p>Provide contact details and form here.</p>
-    <div class="rectangles">
-      <div class="rectangle"></div>
-      <div class="rectangle"></div>
-    </div>
+    <div class="rectangle"></div>
   </section>
 
 </body>
