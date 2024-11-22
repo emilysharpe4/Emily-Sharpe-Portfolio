@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Emily Sharpe Portfolio</title>
-  <!-- Add Google Fonts link for Ramabhadra -->
+  <!-- Google Fonts for Ramabhadra -->
   <link href="https://fonts.googleapis.com/css2?family=Ramabhadra&display=swap" rel="stylesheet">
-
   <style>
     /* General Reset */
     * {
@@ -14,23 +13,34 @@
       box-sizing: border-box;
     }
 
-    /* Enable smooth scrolling for the page */
+    /* Smooth Scrolling */
     html {
       scroll-behavior: smooth;
     }
 
     body {
       font-family: Arial, sans-serif;
-      line-height: 2;
+      line-height: 1.6;
+    }
+
+    /* Center Container */
+    .center-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh; /* Full viewport height */
+      text-align: center;
+      margin: 0 auto;
     }
 
     /* Navigation */
     nav {
       background-color: #333;
       color: white;
-      padding: 30px;
-      position: fixed;
+      padding: 20px;
       width: 100%;
+      position: fixed;
       top: 0;
       z-index: 1000;
     }
@@ -38,9 +48,8 @@
     nav ul {
       list-style: none;
       display: flex;
-      justify-content: right;
-      gap: 10px;
-      font-size: 18px;
+      justify-content: center;
+      gap: 15px;
     }
 
     nav ul li a {
@@ -57,247 +66,67 @@
 
     /* Section Styling */
     section {
-      padding: 20px 150px;
-      position: relative;
+      padding: 20px;
+      width: 100%;
       display: flex;
       flex-direction: column;
-      justify-content: flex-start;
-      align-items: flex-start;
-      background-color: white;
+      align-items: center;
+      justify-content: center;
     }
 
-    /* Custom Section Divider Colors */
-    #intro { border-bottom: 0px solid #ffffff; height: 1200px; }
-    #about { border-bottom: 30px solid #ffffff; height: 720px; }
-    #services { border-bottom: 30px solid #87CEEB; height: 850px; }
-    #portfolio { border-bottom: 30px solid #FFD700; }
-    #contact { border-bottom: 30px solid #FF0000; height: 500px; }
-
-    /* Headings Style */
+    /* Headings */
     h1, h2 {
-      margin-top: -10px;
-      margin-bottom: 0px;
-      text-align: left;
-      font-size: 40px;
       font-family: 'Ramabhadra', sans-serif;
+      font-size: 36px;
+      margin-bottom: 20px;
     }
 
-    /* Paragraph Styling */
     p {
+      font-size: 18px;
       max-width: 600px;
-      margin-top: 10px;
-      margin-bottom: 0px;
-      font-size: 25px;
-    }
-
-    /* Flexbox for Introduction Content */
-    .intro-content {
-      display: flex;
-      justify-content: flex-start;
-      align-items: flex-start;
-      gap: 70px;
-      margin-top: 0px;
-    }
-
-    .text-column {
-      flex: 1;
-      padding: 20px;
-      max-width: 500px;
-    }
-
-    .id {
-      flex: 1;
-      padding: 10px;
     }
 
     /* Image Styling */
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .intro-content, .about-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
     .id img {
       max-width: 500px;
-      height: auto;
-      border-radius: 0px;
     }
 
     .welcome-photo img {
-      max-width: 1200px;
-      height: auto;
-      display: block;
-      margin-left: -60px;
-      margin-right: 10px;
-      margin-top: 50px 
+      max-width: 100%;
+      margin-top: 50px;
     }
 
-    /* About Me Section Layout */
-    .about-content {
-      display: flex;
-      justify-content: flex-start;
-      align-items: flex-start;
-      gap: 70px;
-      padding: 20px;
-    }
-
-    #about .id {
-      flex: 1;
-      display: flex;
-      justify-content: flex-start;
-    }
-
-    #about .id img {
-      max-width: 500px;
-      height: flex;
-      border-radius: 0px;
-    }
-
-    #about .text-column {
-      flex: 1;
-      padding: 20px;
-      max-width: 500px;
-    }
-
-    /* Services Section */
-    #services h2 {
-      color: #87CEEB;
-    }
-
-    #portfolio h2 {
-      color: #FFD700;
-    }
-
-    #contact h2 {
-      color: #FF0000;
-    }
-
-    #contact .rectangle {
-      background-color: #FF0000;
-    }
-
-    /* Portfolio Section Image Styling */
-    #portfolio .id img {
-      max-width: 2000px;
-      height: auto;
-      border-radius: 0px;
-      object-fit: cover;
-      display: block;
-      margin: auto;
-    }
-
-    /* Responsive Styles (Media Queries) */
-
-    /* Tablet (Medium Devices) */
-    @media (max-width: 1024px) {
-      body {
-        font-size: 16px;
-      }
-
-      nav ul {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      nav ul li {
-        margin-bottom: 10px;
-      }
-
-      section {
-        padding: 20px 40px;
-      }
-
-      .intro-content {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-      }
-
-      .text-column,
-      .id {
-        max-width: 100%;
-      }
-
-      .id img {
-        max-width: 80%;
-        height: auto;
-      }
-
-      .welcome-photo img {
-        max-width: 100%;
-      }
-
-      #about .id img {
-        max-width: 100%;
-      }
-
-      #services .squares-wrapper {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      #portfolio .squares-wrapper {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-
-    /* Mobile (Small Devices) */
+    /* Responsive Styles */
     @media (max-width: 768px) {
-      body {
-        font-size: 14px;
-      }
-
       nav ul {
         flex-direction: column;
         align-items: center;
-      }
-
-      nav ul li {
-        margin-bottom: 10px;
-      }
-
-      section {
-        padding: 20px 20px;
-      }
-
-      .intro-content {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-      }
-
-      .text-column,
-      .id {
-        max-width: 100%;
-      }
-
-      .id img {
-        max-width: 80%;
-        height: auto;
-      }
-
-      .welcome-photo img {
-        max-width: 100%;
-      }
-
-      #about .id img {
-        max-width: 100%;
-      }
-
-      #services .squares-wrapper {
-        grid-template-columns: 1fr;
-      }
-
-      #portfolio .squares-wrapper {
-        grid-template-columns: 1fr;
       }
 
       h1, h2 {
-        font-size: 24px;
+        font-size: 28px;
       }
 
       p {
-        font-size: 18px;
+        font-size: 16px;
       }
     }
   </style>
 </head>
 <body>
-
-  <!-- Navigation Bar -->
+  <!-- Navigation -->
   <nav>
     <ul>
       <li><a href="#intro">Introduction</a></li>
@@ -308,72 +137,55 @@
     </ul>
   </nav>
 
-  <!-- Introduction Section -->
-  <section id="intro">
-    <div class="welcome-photo">
-      <img src="welcome.png" alt="Introduction Image">
-    </div>
-
-    <div class="intro-content">
-      <div class="text-column">
+  <div class="center-container">
+    <!-- Introduction Section -->
+    <section id="intro">
+      <div class="welcome-photo">
+        <img src="welcome.png" alt="Welcome">
+      </div>
+      <div class="intro-content">
         <h1>Hello, I'm</h1>
         <h2>Emily Sharpe</h2>
         <p>I am a 2nd year student currently taking Honours Global Business and Digital Arts at the University of Waterloo. I enjoy UI & UX design, poster and product packaging design. I work in various mediums, but enjoy digital Creative Cloud tools the most.</p>
       </div>
-      <div class="id">
-        <img src="Screenshot 2024-11-20 at 9.36.47 PM.png" alt="Profile Photo">
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- About Section -->
-  <section id="about">
-    <h1>About Me</h1>
-    <div class="about-content">
-      <div class="id">
-        <img src="Screenshot 2024-11-20 at 9.08.39 PM.png" alt="About Me Photo">
+    <!-- About Section -->
+    <section id="about">
+      <h1>About Me</h1>
+      <div class="about-content">
+        <div class="id">
+          <img src="Screenshot 2024-11-20 at 9.08.39 PM.png" alt="About Me">
+        </div>
+        <p>Creative thinking, attention to detail, strong communication skills, and time management define my passion for design.</p>
       </div>
-      <div class="text-column">
-        <p>Student Graphic Designer <br><br>Creative thinking<br>
-          Strong communication skills<br>
-          Attention to detail<br>
-          Time management skills<br>
-          Patience<br>
-          Passion<br>
-          Adaptability</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Services Section -->
-  <section id="services">
-    <h2>Services I Provide</h2>
-    <div class="services-content">
+    <!-- Services Section -->
+    <section id="services">
+      <h2>Services I Provide</h2>
       <div class="id">
         <img src="Screenshot 2024-11-18 at 11.37.13 AM.png" alt="Services">
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Portfolio Section -->
-  <section id="portfolio">
-    <h2>Portfolio</h2>
-    <div class="portfolio-content">
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+      <h2>Portfolio</h2>
       <div class="id">
-        <img src="Screenshot 2024-11-20 at 10.12.17 PM.png" alt="Portfolio Image">
+        <img src="Screenshot 2024-11-20 at 10.12.17 PM.png" alt="Portfolio">
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Contact Section -->
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <div class="id">
-      <img src="Screenshot 2024-11-20 at 10.58.51 PM.png" alt="Contact">
-    </div>
-    <p>Feel free to reach out!</p>
-    <p>Email: e4sharpe@uwaterloo.ca<br>
-    Instagram: emily_sharpe24</p>
-  </section>
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <div class="contact">
+        <img src="Screenshot 2024-11-20 at 10.58.51 PM.png" alt="Contact">
+      </div>
+      <p>Email: e4sharpe@uwaterloo.ca</p>
+      <p>Instagram: emily_sharpe24</p>
+    </section>
+  </div>
 </body>
 </html>
