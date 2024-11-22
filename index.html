@@ -55,6 +55,14 @@
       border-radius: 5px;
     }
 
+    /* Main Container */
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      width: 100%;
+    }
+
     /* Section Styling */
     section {
       padding: 100px 150px;
@@ -64,6 +72,7 @@
       justify-content: flex-start;
       align-items: flex-start;
       background-color: white;
+      width: 80%;  /* Adjust width to keep content centered */
     }
 
     /* Custom Section Divider Colors */
@@ -305,73 +314,75 @@
     </ul>
   </nav>
 
-  <!-- Introduction Section -->
-  <section id="intro">
-    <div class="welcome-photo">
-      <img src="welcome.png" alt="Introduction Image">
-    </div>
-
-    <div class="intro-content">
-      <div class="text-column">
-        <h1>Hello, I'm</h1>
-        <h2>Emily Sharpe</h2>
-        <p>I am a 2nd year student currently taking Honours Global Business and Digital Arts at the University of Waterloo. I enjoy UI & UX design, poster and product packaging design. I work in various mediums, but enjoy digital Creative Cloud tools the most.</p>
+  <!-- Wrapper to center content -->
+  <div class="container">
+    <!-- Introduction Section -->
+    <section id="intro">
+      <div class="welcome-photo">
+        <img src="welcome.png" alt="Introduction Image">
       </div>
-      <div class="id">
-        <img src="Screenshot 2024-11-20 at 9.36.47 PM.png" alt="Profile Photo">
-      </div>
-    </div>
-  </section>
 
-  <!-- About Section -->
-  <section id="about">
-    <h1>About Me</h1>
-    <div class="about-content">
-      <div class="id">
-        <img src="Screenshot 2024-11-20 at 9.08.39 PM.png" alt="About Me Photo">
+      <div class="intro-content">
+        <div class="text-column">
+          <h1>Hello, I'm</h1>
+          <h2>Emily Sharpe</h2>
+          <p>I am a 2nd year student currently taking Honours Global Business and Digital Arts at the University of Waterloo. I enjoy UI & UX design, poster and product packaging design. I work in various mediums, but enjoy digital Creative Cloud tools the most.</p>
+        </div>
+        <div class="id">
+          <img src="Screenshot 2024-11-20 at 9.36.47 PM.png" alt="Profile Photo">
+        </div>
       </div>
-      <div class="text-column">
-        <p>Student Graphic Designer <br><br>Creative thinking<br>
-          Strong communication skills<br>
-          Attention to detail<br>
-          Time management skills<br>
-          Patience<br>
-          Passion<br>
-          Adaptability</p>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+      <h1>About Me</h1>
+      <div class="about-content">
+        <div class="id">
+          <img src="Screenshot 2024-11-20 at 9.08.39 PM.png" alt="About Me Photo">
+        </div>
+        <div class="text-column">
+          <p>Student Graphic Designer <br><br>Creative thinking<br>
+            Strong communication skills<br>
+            Attention to detail<br>
+            Time management skills<br>
+            Patience<br>
+            Passion<br>
+            Adaptability</p>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Services Section -->
-  <section id="services">
-    <h2>Services I Provide</h2>
-    <div class="services-content">
-      <div class="id">
-        <img src="Screenshot 2024-11-18 at 11.37.13 AM.png" alt="Services">
+    <!-- Services Section -->
+    <section id="services">
+      <h2>Services I Provide</h2>
+      <div class="services-content">
+        <div class="id">
+          <img src="Screenshot 2024-11-18 at 11.37.13 AM.png" alt="Services">
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Portfolio Section -->
-  <section id="portfolio">
-    <h2>Portfolio</h2>
-    <div class="portfolio-content">
-      <div class="id">
-        <img src="Screenshot 2024-11-20 at 10.12.17 PM.png" alt="Portfolio Image">
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+      <h2>Portfolio</h2>
+      <div class="portfolio-content">
+        <div class="id">
+          <img src="Screenshot 2024-11-20 at 10.12.17 PM.png" alt="Portfolio Image">
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Contact Section -->
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <div class="contact">
-      <img src="Screenshot 2024-11-20 at 10.58.51 PM.png" alt="Contact">
-    </div>
-    <p>Feel free to reach out!</p>
-    <p>Email: e4sharpe@uwaterloo.ca<br>
-    Instagram: emily_sharpe24</p>
-  </section>
-
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <div class="contact">
+        <img src="Screenshot 2024-11-20 at 10.58.51 PM.png" alt="Contact">
+      </div>
+      <p>Feel free to reach out!</p>
+      <p>Email: e4sharpe@uwaterloo.ca<br>
+      Instagram: emily_sharpe24</p>
+    </section>
+  </div>
 </body>
 </html>
