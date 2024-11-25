@@ -75,7 +75,11 @@
 
     /* Custom Section Divider Colors */
     #intro { border-bottom: 0px solid #ffffff; height: 1200px; }
-    #about { border-bottom: 30px solid #ffffff; height: 720px; }
+    #about { 
+      border-bottom: 30px solid #ffffff; 
+      height: auto;  /* Allow content to grow with height */
+      padding-bottom: 40px; /* Extra room under the section */
+    }
     #services { border-bottom: 30px solid #87CEEB; height: 850px; }
     #portfolio { border-bottom: 30px solid #FFD700; }
     #contact { border-bottom: 30px solid #FF0000; height: 500px; }
@@ -93,7 +97,7 @@
     #about h1 {
       color: #0251C2;
       text-align: right;
-      padding: 50px/* Matches the light blue border color */
+      padding: 50px; /* Matches the light blue border color */
     }
 
     /* Paragraph Styling */
@@ -145,6 +149,7 @@
       align-items: flex-start;
       gap: 70px;
       padding: 20px;
+      margin-bottom: 40px; /* Add margin for extra space below the content */
     }
 
     #about .id {
