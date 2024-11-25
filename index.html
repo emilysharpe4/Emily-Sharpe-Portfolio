@@ -8,7 +8,7 @@
 
   <style>
     body {
-      text-align: left; /* Ensure text is aligned properly */
+      text-align: left;
       margin: 0;
       padding: 0;
       box-sizing: border-box;
@@ -75,14 +75,10 @@
 
     /* Custom Section Divider Colors */
     #intro { border-bottom: 0px solid #ffffff; height: 1200px; }
-    #about { 
-      border-bottom: 30px solid #ffffff; 
-      height: auto;  /* Allow content to grow with height */
-      padding-bottom: 40px; /* Extra room under the section */
-    }
+    #about { border-bottom: 30px solid #ffffff; padding-bottom: 40px; }
     #services { border-bottom: 30px solid #87CEEB; height: 850px; }
     #portfolio { border-bottom: 30px solid #FFD700; }
-    #contact { border-bottom: 30px solid #FF0000; height: 500px; }
+    #contact { border-bottom: 30px solid #FF0000; height: auto; }
 
     /* Headings Style */
     h1, h2 {
@@ -97,14 +93,14 @@
     #about h1 {
       color: #0251C2;
       text-align: right;
-      padding: 50px; /* Matches the light blue border color */
+      width: 100%;
+      padding-right: 30px;
     }
 
     /* Paragraph Styling */
     p {
       max-width: 600px;
       margin-top: 10px;
-      margin-bottom: 0px;
       font-size: 25px;
     }
 
@@ -114,7 +110,6 @@
       justify-content: flex-start;
       align-items: flex-start;
       gap: 70px;
-      margin-top: 0px;
     }
 
     .text-column {
@@ -149,165 +144,39 @@
       align-items: flex-start;
       gap: 70px;
       padding: 20px;
-      margin-bottom: 40px; /* Add margin for extra space below the content */
-    }
-
-    #about .id {
-      flex: 1;
-      display: flex;
-      justify-content: flex-start;
+      margin-bottom: 40px;
     }
 
     #about .id img {
       max-width: 500px;
-      height: flex;
-      border-radius: 0px;
+      height: auto;
     }
 
-    #about .text-column {
-      flex: 1;
-      padding: 20px;
-      max-width: 500px;
-    }
+    #services h2 { color: #87CEEB; }
+    #portfolio h2 { color: #FFD700; }
+    #contact h2 { color: #FF0000; }
 
-    /* Services Section */
-    #services h2 {
-      color: #87CEEB;
-    }
-
-    #portfolio h2 {
-      color: #FFD700;
-    }
-
-    #contact h2 {
-      color: #FF0000;
-    }
-
-    #contact .rectangle {
-      background-color: #FF0000;
-    }
-
-    /* Portfolio Section Image Styling */
     #portfolio .id img {
       max-width: 100%;
       height: auto;
-      border-radius: 0px;
       object-fit: cover;
       display: block;
       margin: auto;
     }
 
-    /* Responsive Styles (Media Queries) */
-    /* Tablet (Medium Devices) */
-    @media (max-width: 1024px) {
-      body {
-        font-size: 16px;
-      }
-
-      nav ul {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      nav ul li {
-        margin-bottom: 10px;
-      }
-
-      section {
-        padding: 50px 40px;
-      }
-
-      .intro-content {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-      }
-
-      .text-column,
-      .id {
-        max-width: 100%;
-      }
-
-      .id img {
-        max-width: 80%;
-        height: auto;
-      }
-
-      .welcome-photo img {
-        max-width: 100%;
-      }
-
-      #about .id img {
-        max-width: 100%;
-      }
-
-      #services .squares-wrapper {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      #portfolio .squares-wrapper {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-
-    /* Mobile (Small Devices) */
+    /* Responsive Styles */
     @media (max-width: 768px) {
-      body {
-        font-size: 14px;
-      }
-
-      nav ul {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      nav ul li {
-        margin-bottom: 10px;
-      }
-
       section {
         padding: 50px 20px;
       }
 
-      .intro-content {
+      .intro-content, .about-content {
         flex-direction: column;
         align-items: center;
-        gap: 10px;
       }
 
-      .text-column,
-      .id {
-        max-width: 100%;
-      }
-
-      .id img {
-        max-width: 80%;
-        height: auto;
-      }
-
-      .welcome-photo img {
-        max-width: 100%;
-      }
-
-      #about .id img {
-        max-width: 100%;
-      }
-
-      #services .squares-wrapper {
-        grid-template-columns: 1fr;
-      }
-
-      #portfolio .squares-wrapper {
-        grid-template-columns: 1fr;
-      }
-
-      h1, h2 {
-        font-size: 24px;
-      }
-
-      p {
-        font-size: 18px;
-      }
+      h1, h2 { font-size: 24px; }
+      p { font-size: 18px; }
     }
   </style>
 </head>
@@ -350,7 +219,7 @@
         <img src="Screenshot 2024-11-20 at 9.08.39 PM.png" alt="About Me Photo">
       </div>
       <div class="text-column">
-        <p>Student Graphic Designer <br><br>Creative thinking<br>
+        <p>Student Graphic Designer<br><br>Creative thinking<br>
           Strong communication skills<br>
           Attention to detail<br>
           Time management skills<br>
@@ -389,9 +258,15 @@
     </div>
     <p>Feel free to reach out!</p>
     <table>
-      <th>e4sharpe@uwaterloo.ca /</th>
-      <th>emily_sharpe24 / </th>
-      <th>519-123-1234 </th>
+      <tr>
+        <td>📧 e4sharpe@uwaterloo.ca</td>
+      </tr>
+      <tr>
+        <td>📱 emily_sharpe24</td>
+      </tr>
+      <tr>
+        <td>📞 519-123-1234</td>
+      </tr>
     </table>
   </section>
 
