@@ -89,14 +89,17 @@
       font-family: 'Ramabhadra', sans-serif;
     }
 
+    #intro h1, #intro h2 {
+      font-size: 42px; /* Set the font size of the 'Hello, I'm Emily Sharpe' to 40px */
+    }
+
     /* About Me Header Style */
     #about h1 {
       color: #0251C2;
       text-align: right;
       width: 100%;
       padding-right: 30px;
-    
-      
+      font-size: 50px;
     }
 
     /* Paragraph Styling */
@@ -123,7 +126,6 @@
     .id {
       flex: 1;
       padding: 10px;
-     
     }
 
     /* Image Styling */
@@ -161,11 +163,12 @@
     #contact h2 { color: #FF0000; }
 
     #portfolio .id img {
-      max-width: 800%;
-      height: auto;
-      object-fit: cover;
-      display: block;
-      margin: auto;
+      max-width: 1200px;
+      height: 930px;
+      object-fit: 
+   : ; /* Ensure the image is a block-level element */
+      margin: 0 auto;
+       padding-left: 80px;/* Center the image horizontally */
     }
 
     /* Responsive Styles */
@@ -179,7 +182,7 @@
         align-items: center;
       }
 
-      h1, h2 { font-size: 40px; }
+      h1, h2 { font-size: 50px; }
       p { font-size: 25px; }
     }
   </style>
@@ -205,7 +208,7 @@
     <div class="intro-content">
       <div class="text-column">
         <h1>Hello, I'm</h1>
-        <h2 style="color: red;">Emily Sharpe</h2>
+        <h2 style="color: red;">Emily Sharpe</h2> 
         <p>I am a 2nd year <span style="color: red;">student</span> currently taking Honours Global Business and Digital Arts at the University of Waterloo. I enjoy UI & UX design, poster and product packaging design. I work in various mediums, but enjoy digital Creative Cloud tools the most.</p>
       </div>
       <div class="id">
@@ -227,7 +230,6 @@
             <span style="color: red; font-size: 32px;">Student Graphic Designer</span>
           </strong>
         </p>
-        <!-- Bullet points styled to match paragraph text -->
         <ul style="font-size: 25px; margin-left: 20px;">
           <li>Creative thinking</li>
           <li>Strong communication skills</li>
