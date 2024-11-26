@@ -74,18 +74,18 @@
     }
 
     /* Custom Section Divider Colors */
-    #intro { border-bottom: 0px solid #ffffff; height: 1200px; }
-    #about { border-bottom: 30px solid #ffffff; padding-bottom: 40px; }
-    #services { border-bottom: 30px solid #87CEEB; height: 850px; }
+    #intro { border-bottom: 0px solid #ffffff; height: 1350px; }
+    #about { border-bottom: px solid #ffffff; padding-bottom: 10px; }
+    #services { border-bottom: 30px solid #87CEEB; height: 700px; }
     #portfolio { border-bottom: 30px solid #FFD700; }
     #contact { border-bottom: 30px solid #FF0000; height: auto; }
 
-    /* Headings Style */
+    /* Headings Style - Set all section headers to 30px */
     h1, h2 {
       margin-top: -10px;
       margin-bottom: 0px;
       text-align: left;
-      font-size: 40px;
+      font-size: 30px; /* Set font size for all headers */
       font-family: 'Ramabhadra', sans-serif;
     }
 
@@ -95,6 +95,8 @@
       text-align: right;
       width: 100%;
       padding-right: 30px;
+    
+      
     }
 
     /* Paragraph Styling */
@@ -154,7 +156,7 @@
     }
 
     #services h2 { color: #87CEEB; }
-    #portfolio h2 { color: #FFD700; }
+    #portfolio h2 { color: #FFD700;  }
     #contact h2 { color: #FF0000; }
 
     #portfolio .id img {
@@ -176,8 +178,8 @@
         align-items: center;
       }
 
-      h1, h2 { font-size: 24px; }
-      p { font-size: 18px; }
+      h1, h2 { font-size: 30px; }
+      p { font-size: 20px; }
     }
   </style>
 </head>
@@ -199,15 +201,11 @@
     <div class="welcome-photo">
       <img src="welcome.png" alt="Introduction Image">
     </div>
-<div class="text-column">
-
-</div>
-
     <div class="intro-content">
       <div class="text-column">
         <h1>Hello, I'm</h1>
-        <h2  style="color: red;"> Emily Sharpe</h2>
-        <p>I am a 2nd year <span style="color: red;">student</span>  currently taking Honours Global Business and Digital Arts at the University of Waterloo. I enjoy UI & UX design, poster and product packaging design. I work in various mediums, but enjoy digital Creative Cloud tools the most.</p>
+        <h2 style="color: red;">Emily Sharpe</h2>
+        <p>I am a 2nd year <span style="color: red;">student</span> currently taking Honours Global Business and Digital Arts at the University of Waterloo. I enjoy UI & UX design, poster and product packaging design. I work in various mediums, but enjoy digital Creative Cloud tools the most.</p>
       </div>
       <div class="id">
         <img src="Screenshot 2024-11-20 at 9.36.47 PM.png" alt="Profile Photo">
@@ -223,19 +221,21 @@
         <img src="Screenshot 2024-11-20 at 9.08.39 PM.png" alt="About Me Photo">
       </div>
       <div class="text-column">
-        <p><strong>
-    <span style="color: red; font-size: 30px;">Student Graphic Designer</span>
-  </strong> 
-  <br>
-         <ul>
-            <li>Creative thinking<br>
-         <li>Strong communication skills<br>
-         <li>Attention to detail<br>
-         <li> Time management skills<br>
-         <li> Patience<br>
-         <li> Passion<br>
-         <li> Adaptability</p>
-        </ul>   
+        <p>
+          <strong>
+            <span style="color: red; font-size: 25px;">Student Graphic Designer</span>
+          </strong>
+        </p>
+        <!-- Bullet points styled to match paragraph text -->
+        <ul style="font-size: 20px; margin-left: 20px;">
+          <li>Creative thinking</li>
+          <li>Strong communication skills</li>
+          <li>Attention to detail</li>
+          <li>Time management skills</li>
+          <li>Patience</li>
+          <li>Passion</li>
+          <li>Adaptability</li>
+        </ul>
       </div>
     </div>
   </section>
@@ -270,12 +270,9 @@
     <table>
       <tr>
         <td>e4sharpe@uwaterloo.ca /</td>
-  
-
         <td>emily_sharpe24 / </td>
-  
-        <td>519-123-1234
-    
+        <td>519-123-1234</td>
+      </tr>
     </table>
   </section>
 
