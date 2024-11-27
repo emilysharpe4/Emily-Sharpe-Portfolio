@@ -74,11 +74,11 @@
     }
 
     /* Custom Section Divider Colors */
-    #intro { border-bottom: 0px solid #ffffff; height: 1100px; }
-    #about { border-bottom: px solid #ffffff; padding-bottom: 0px; }
-    #services { border-bottom: 0px solid #87CEEB; height: 800px; }
-    #portfolio { border-bottom: 0px solid #FFD700; }
-    #contact { border-bottom: 30px solid #FF0000; height: auto; }
+    #intro { border-bottom: 0px solid #ffffff; height: 1050px; }
+    #about { border-bottom: px solid #ffffff; padding-bottom: 0px; height: 700px; }
+    #services { border-bottom: 0px solid #87CEEB; height: 700px; }
+    #portfolio { border-bottom: 0px solid #FFD700; height: 1145px; }
+    #contact { border-bottom: 20px solid #FF0000; height: auto; }
 
     /* Headings Style - Set all section headers to 30px */
     h1, h2 {
@@ -152,24 +152,57 @@
       padding: 20px;
       margin-bottom: 30px;
     }
+     #contact img {
+  margin-left: 270px; /* Add desired padding */
+  max-width: 500px;/* Ensure the image remains responsive */
+  height: 140px;
+} 
 
     #about .id img {
       max-width: 400px;
       height: auto;
     }
 
-    #services h2 { color: #87CEEB; }
-    #portfolio h2 { color: #FFD700;  }
-    #contact h2 { color: #FF0000; }
+    #services h2 { color: #87CEEB;font-size: 50px; }
+    #portfolio h2 { color: #FFD700; margin-left: 390px ; font-size: 50px;/* Center the header */
+  margin-bottom: 20px;
+    }
+    
+    #contact h2 { color: red ;margin-left: 380px;font-size: 50px;
+   margin-bottom:-20px
+    }
+    
+    #contact p{ 
+    color: red;
+    margin-left: 410px;
+    font-size: 20px;
+    margin-top:-10px
+      
+    }
+     
+    
+
 
     #portfolio .id img {
-      max-width: 1200px;
-      height: 930px;
-      object-fit: 
-   : ; /* Ensure the image is a block-level element */
+      max-width: 1150px;
+      height: 930px; 
       margin: 0 auto;
-       padding-left: 20px;/* Center the image horizontally */
-    }
+       padding-left: 10px;/* Center the image horizontally */
+
+   /* Add spacing below */
+}
+    #services .id img {
+  max-width: 830px; /* Adjust the maximum width */
+  height: 530px; /* Keep aspect ratio */
+  margin-left:90px ; /* Center and add some spacing */; /* Ensure it's centered */
+} 
+
+#portfolio .portfolio-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Keep other content aligned to the left */
+}
+    
 
     /* Responsive Styles */
     @media (max-width: 768px) {
@@ -187,6 +220,26 @@
       h1, h2 { font-size: 50px; }
       p { font-size: 25px; }
     }
+    
+    #contact table {
+  margin: 20px auto; /* Center the table horizontally */
+  text-align: center; 
+       margin-top:-5px/* Align table content to the center */
+}
+
+#contact td {
+  padding: 0px;
+  color:  red;
+  font-size: 15px
+    /* Add spacing around table cells */
+} 
+
+#contact a {
+  color: red;
+} 
+    
+    
+      
   </style>
 </head>
 <body>
@@ -257,13 +310,14 @@
 
   <!-- Portfolio Section -->
   <section id="portfolio">
-    <h2>  Portfolio</h2>
-    <div class="portfolio-content">
-      <div class="id">
-        <img src="Screenshot 2024-11-20 at 10.12.17 PM.png" alt="Portfolio Image">
-      </div>
+  <h2>Portfolio</h2>
+  <div class="portfolio-content">
+    <div class="id">
+      <img src="Screenshot 2024-11-20 at 10.12.17 PM.png" alt="Portfolio Image">
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- Contact Section -->
   <section id="contact">
@@ -271,7 +325,6 @@
     <div class="contact">
       <img src="Screenshot 2024-11-20 at 10.58.51 PM.png" alt="Contact">
     </div>
-    <p>Feel free to reach out!</p>
     <table>
       <tr>
         <td>email: <a href="mailto:e4sharpe@uwaterloo.ca">e4sharpe@uwaterloo.ca</a> /</td>
@@ -279,7 +332,10 @@
         <td>Cell: 519-123-1234</td>
       </tr>
     </table>
+     <p>Feel free to reach out!</p>
   </section>
+  
+   
 
 </body>
 </html>
